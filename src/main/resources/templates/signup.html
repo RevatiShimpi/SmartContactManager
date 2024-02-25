@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xlmns:th="http://www.thymeleaf.org" xmlns:xlmns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml" th:replace="base::layout(~{::section})">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="mycard">
+            <div th:if="${session.message}" th:classappend="${session.message.type}" class="alert " role="alert">
+                <p th:text="${session.message.content}"></p>
+                <th:block th:text="${#session.removeAttribute('message')}"></th:block>
+            </div>
+        <h1 class="text-center">Sign Up Here</h1>
+          <form action=" " th:action="@{/do_register}" method="post" th:object="${user}">
+            <div class="form-group">
+              <label for="name_field" class="form-label">Name</label>
+              <input th:classappend="${#fields.hasErrors('name')?'is-invalid':''}" name="name" type="text" class="form-control" id="name_field" aria-describedby="emailHelp" placeholder="Enter your name"
+              th:value="${user.name}">
+
+
+            </div>
+            <div class="form-group">
+              <label for="email_field" class="form-label">Email</label>
+              <input name="email" type="email" class="form-control" id="email_field" aria-describedby="emailHelp" placeholder="Enter your email" th:value="${user.email}">
+            </div>
+            <div class="form-group">
+              <label for="pass_field" class="form-label">Password</label>
+              <input name="password" type="password" class="form-control" id="pass_field" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+              <textarea name="about " placeholder="Enter about yourself" rows="7" class="form-control" th:value="${user.about}"></textarea>
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" name="agreement" id="agreement"/>
+              <label for="agreement" >Accept Terms and conditions</label>
+            </div>
+            <div  class="container text-center">
+              <button type="submit" class="btn bg-primary text-white">Submit</button>
+              <button type="reset" class="btn bg-primary text-white">Reset</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

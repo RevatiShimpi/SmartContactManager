@@ -1,0 +1,45 @@
+body{
+background:green;
+
+}
+.bg-primary{
+    background:grey;
+}
+.banner{
+    width:100%;
+    height:auto;
+    background-img:url("../img/banner.jpg");
+    background-size:cover;
+}
+.mycard{
+    padding: 20px;
+    background:#FFFFFF;
+}
+/*sidebar*/
+
+.sidebar a{
+    display:block;
+    width:100%;
+    padding:10px 25px;
+    text-decoration:none;
+    color:gray;
+
+}
+.sidebar a:hover{
+    background:green;
+}
+.sidebar .divider{
+    height:.5px;
+    width:100%;
+    background:blue;
+}
+.sidebar .crossBtn{
+    position:absolute;
+    top:0;
+    right:35px;
+    font-size:36px;
+    cursor:pointer;
+}
+.content{
+    margin-left:20%;
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xlmns:th="http://www.thymeleaf.org" xmlns:xlmns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml" th:replace="base::layout(~{::section})">
+<script src="https://kit.fontawesome.com/6482680cd5.js" crossorigin="anonymous"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section>
+    <h1>Welcome normal user <span th:text="${user.name}"></span>!!</h1>
+    <h1>This is your private dashboard</h1>
+    <h1>User email is <span th:text="${user.email}"></span></h1>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xlmns:th="http://www.thymeleaf.org" xmlns:xlmns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml" th:replace="base::layout(~{::section})" xmlns: xmlns: xmlns: xmlns:>
+<script src="https://kit.fontawesome.com/6482680cd5.js" crossorigin="anonymous"></script>
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<section>
+  <h1>ADD CONTACT</h1>
+  <form action="#" th:object="${contact}" enctype="multipart/form-data" method="POST" th:action="@{/user/process-contact}">
+    <div class="mb-3">
+      <label for="Name1" class="form-label">Name</label>
+      <input type="text" class="form-control" id="Name1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="LName" class="form-label">LastName</label>
+      <input type="text" class="form-control" id="LName" >
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone</label>
+      <input type="number" class="form-control" id="phone" >
+    </div>
+    <div class="mb-3">
+      <label  class="form-label">About</label>
+      <input type="text-box" class="form-control" id="myTextarea" rows="20" >
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</section>
+<script
+        type="text/javascript"
+        src='https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js'
+        referrerpolicy="origin">
+</script>
+<script type="text/javascript"></script>
+
+</body>
+</html>
